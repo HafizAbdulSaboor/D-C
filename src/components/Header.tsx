@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, Sparkles, ChevronDown, ShoppingBag, Globe, Smartphone, Code, Cpu, Sun, Moon } from 'lucide-react';
+import { useState } from 'react';
+import { Menu, X, ArrowUpRight, Sparkles, ChevronDown, ShoppingBag, Globe, Smartphone, Code, Cpu } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface HeaderProps {
@@ -10,45 +10,10 @@ interface HeaderProps {
 }
 
 export default function Header({ activeSection, onNavigate, onViewServiceDetail, onOpenPrivacy }: HeaderProps) {
-  // const [isScrolled, setIsScrolled] = useState(false);
+  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileProgramExpanded, setIsMobileProgramExpanded] = useState(false);
-
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return 'light';
-  });
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 20) {
-  //       setIsScrolled(true);
-  //     } else {
-  //       setIsScrolled(false);
-  //     }
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
 
   const navLinks = [
     { id: 'home', label: 'Home' },
@@ -78,13 +43,10 @@ export default function Header({ activeSection, onNavigate, onViewServiceDetail,
 
   return (
     <header
-  id="main-navigation-header"
-  className="fixed top-0 left-0 right-0 z-50 py-4 border-b shadow-md backdrop-blur-md"
-  style={{
-    backgroundColor: "rgba(240,249,255,0.95)",
-    borderColor: "#bae6fd",
-  }}
->
+      id="main-navigation-header"
+      className="fixed top-0 left-0 right-0 z-50 py-4 border-b shadow-md backdrop-blur-md"
+      style={{ backgroundColor: "rgba(240,249,255,0.95)", borderColor: "#bae6fd" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
@@ -179,12 +141,8 @@ export default function Header({ activeSection, onNavigate, onViewServiceDetail,
                                       <Icon className="w-4 h-4" />
                                     </div>
                                     <div>
-                                      <span className="block font-sans font-bold text-xs transition-colors" style={{ color: '#0c1a2e' }}>
-                                        {item.title}
-                                      </span>
-                                      <span className="block font-sans text-[10px] mt-0.5 leading-snug" style={{ color: '#94a3b8' }}>
-                                        {item.desc}
-                                      </span>
+                                      <span className="block font-sans font-bold text-xs transition-colors" style={{ color: '#0c1a2e' }}>{item.title}</span>
+                                      <span className="block font-sans text-[10px] mt-0.5 leading-snug" style={{ color: '#94a3b8' }}>{item.desc}</span>
                                     </div>
                                   </button>
                                 );
@@ -212,12 +170,8 @@ export default function Header({ activeSection, onNavigate, onViewServiceDetail,
                                       <Icon className="w-4 h-4" />
                                     </div>
                                     <div>
-                                      <span className="block font-sans font-bold text-xs transition-colors" style={{ color: '#0c1a2e' }}>
-                                        {item.title}
-                                      </span>
-                                      <span className="block font-sans text-[10px] mt-0.5 leading-snug" style={{ color: '#94a3b8' }}>
-                                        {item.desc}
-                                      </span>
+                                      <span className="block font-sans font-bold text-xs transition-colors" style={{ color: '#0c1a2e' }}>{item.title}</span>
+                                      <span className="block font-sans text-[10px] mt-0.5 leading-snug" style={{ color: '#94a3b8' }}>{item.desc}</span>
                                     </div>
                                   </button>
                                 );
@@ -273,15 +227,6 @@ export default function Header({ activeSection, onNavigate, onViewServiceDetail,
           {/* Right action buttons */}
           <div className="hidden md:flex items-center gap-3">
             <button
-              onClick={toggleTheme}
-              className="p-2.5 rounded-xl border transition-colors cursor-pointer flex items-center justify-center"
-              style={{ borderColor: '#bae6fd', backgroundColor: 'transparent' }}
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun className="w-4 h-4" style={{ color: '#f59e0b' }} /> : <Moon className="w-4 h-4" style={{ color: '#0c1a2e' }} />}
-            </button>
-
-            <button
               id="cta-contact-btn-header"
               onClick={() => handleLinkClick('contact')}
               className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl font-sans text-sm font-semibold transition-all duration-300 cursor-pointer hover:shadow-lg group"
@@ -296,15 +241,6 @@ export default function Header({ activeSection, onNavigate, onViewServiceDetail,
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg border cursor-pointer flex items-center justify-center"
-              style={{ borderColor: '#bae6fd' }}
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun className="w-5 h-5" style={{ color: '#f59e0b' }} /> : <Moon className="w-5 h-5" style={{ color: '#0c1a2e' }} />}
-            </button>
-
             <button
               id="mobile-menu-toggle-btn"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -341,9 +277,11 @@ export default function Header({ activeSection, onNavigate, onViewServiceDetail,
                 if (isProgram) {
                   return (
                     <div key={link.id} className="space-y-1">
-                      <div className="flex items-center justify-between w-full px-4 py-3 rounded-lg" style={{ ['--hover-bg' as string]: '#e0f2fe' }}
+                      <div
+                        className="flex items-center justify-between w-full px-4 py-3 rounded-lg"
                         onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#e0f2fe')}
-                        onMouseLeave={e => (e.currentTarget.style.backgroundColor = '')}>
+                        onMouseLeave={e => (e.currentTarget.style.backgroundColor = '')}
+                      >
                         <button
                           id={`mobile-nav-link-${link.id}`}
                           onClick={() => handleLinkClick(link.id)}
@@ -356,10 +294,11 @@ export default function Header({ activeSection, onNavigate, onViewServiceDetail,
                           id="mobile-nav-program-toggle"
                           onClick={(e) => { e.stopPropagation(); setIsMobileProgramExpanded(!isMobileProgramExpanded); }}
                           className="p-1 rounded-md cursor-pointer"
-                          style={{ color: '#94a3b8' }}
                         >
-                          <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileProgramExpanded ? 'rotate-180' : ''}`}
-                            style={{ color: isMobileProgramExpanded ? '#0ea5e9' : '#94a3b8' }} />
+                          <ChevronDown
+                            className={`w-5 h-5 transition-transform duration-200 ${isMobileProgramExpanded ? 'rotate-180' : ''}`}
+                            style={{ color: isMobileProgramExpanded ? '#0ea5e9' : '#94a3b8' }}
+                          />
                         </button>
                       </div>
 

@@ -11,6 +11,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import PrivacyPolicyModal from './components/PrivacyPolicyModal';
 import Footer from './components/Footer';
+import AmazonFBA from './components/pages/AmazonFBA';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -76,6 +77,8 @@ export default function App() {
                   onSelectServiceAndInquire={handleInquireService}
                   onViewServiceDetail={handleViewServiceDetail}
                 />
+              ) : selectedServiceId === 'amazon' ? (
+                <AmazonFBA />
               ) : (
                 <ServiceDetail
                   serviceId={selectedServiceId}

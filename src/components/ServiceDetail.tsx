@@ -43,19 +43,19 @@ interface ServiceDetailData {
 // Complete fully-populated details registry for all 13 services (Absolutely NO mock fields or empty placeholders)
 const serviceDetailsRegistry: Record<string, ServiceDetailData> = {
   amazon: {
-    title: 'Amazon FBA & FBM Solutions',
+    title: 'Amazon FBA Wholesale',
     category: 'E-Commerce Channel Management',
-    longDescription: 'Enterprise-grade Amazon Channel optimization mapped to global seller performance indices. Our specialists orchestrate custom keyword syndications, algorithmic bidding structures, and A+ visual asset maps for your complete FBA catalog. We optimize store layouts, boost indexing, and manage stock thresholds to ensure your merchant account sustains the highest category rank.',
+    longDescription: 'FBA stands for "Fulfillment By Amazon". In FBA wholesale Business model we research top selling items from different wholesale vendors or Brands. After the product meets research criteria we order 50-1000 units and ship them to Amazon Warehouse. Once Amazon receives our inventory, the product goes Live on Amazon Seller Central and orders start coming in. Amazon FBA wholesale is the most secure and long term business model — with profit margins usually between 15-30% and potential to generate over $10,000 profits within 3-5 months.',
     features: [
-      { title: 'PPC & DSP Bidding Systems', desc: 'Continuous machine-assisted search bidding and display advertising algorithms configured to increase ROAS.' },
-      { title: 'A+ Premium Content Layouts', desc: 'Custom metadata designs, high-contrast listing summaries, and premium images pairing to maximize conversion rate.' },
-      { title: 'SEO Rank Optimization & Keywords', desc: 'Intense reverse-ASIN indexing audits using modern data systems to target high-intent customer search queries.' },
-      { title: 'FBA Inventory Synchronization', desc: 'Secure backend API connection setup to prevent out-of-stock scenarios and lower storage fees.' }
+      { title: 'What Is Amazon FBA?', desc: 'FBA stands for Fulfillment By Amazon. We research top selling wholesale items, order 50-1000 units, and ship to Amazon Warehouse. Amazon then handles all storage, packing and shipping on your behalf.' },
+      { title: 'How FBA Wholesale Works', desc: 'It takes 30-90 days to find a good item. We find products, get Brand approval, and contact multiple brands. Initial investment varies from $7,000-$15,000. We add multiple items with less units so your investment does not get stuck.' },
+      { title: 'Timeline & Profit Margins', desc: 'First 2-3 months go into finding products and shipping to Amazon. This model may take 3-5 months to generate over $10,000 profits. Profit margins are usually 15-30%. Early brand approvals can bring profits by end of month 1 or 2.' },
+      { title: 'Requirements for FBA Wholesale', desc: 'You need: Company Name, Address, Phone Number, EIN Number, Seller Permit, Reseller Certificate, Website Domain/Link, and Business Email. We also provide Website Development and Business Email services.' }
     ],
-    technologies: ['Seller Central API', 'Helium 10 Systems', 'Amazon Advertising DSP', 'Fulfillment API Node'],
-    duration: '3 - 5 weeks baseline setup',
-    metrics: 'Average +34% lift in organic category search ranking within 90 days',
-    team: '1 Ads Director, 1 Conversion Specialist, 1 Inventory Data Analyst'
+    technologies: ['Amazon Seller Central', 'Brand Approval System', '3PL Warehouse Network', 'Amazon FBA Fulfillment'],
+    duration: '3 - 5 months full business launch',
+    metrics: 'Profit margins of 15-30% with $10,000+ monthly profits achievable within 3-5 months',
+    team: '1 FBA Wholesale Specialist, 1 Brand Outreach Manager, 1 Inventory Analyst'
   },
   walmart: {
     title: 'Walmart Seller Growth',
