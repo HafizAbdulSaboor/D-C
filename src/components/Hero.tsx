@@ -7,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ onNavigate }: HeroProps) {
   // We reference our real generated hero background image:
-  const heroImgSrc = '/src/assets/images/hero_bg_1779270511792.png';
+  const heroImgSrc = '/images/hero_bg_1779270511792.png';
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },

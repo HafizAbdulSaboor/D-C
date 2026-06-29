@@ -103,7 +103,7 @@ export const portfolioProjects: Project[] = [
     serviceType: 'Shopify Store Development & Digital Strategy',
     description: 'We built a high-converting, blazing-fast headless Shopify experience with integrated custom recommendation mechanics and luxury brand elements.',
     longDescription: 'A custom, lightning-fast Shopify headless store utilizing high-end premium styling. Our team spearheaded the entire design system, custom liquid layouts, and cart speed optimization. By redesigning user pathways, we achieved significant gains in user session value and checkout velocity. The solution integrates real-time inventory syndication across Amazon and US/EU fulfillment hubs, reducing order management complexity by 60%.',
-    image: '/src/assets/images/ecommerce_shop_1779270450789.png',
+    image: '/images/ecommerce_shop_1779270450789.png',
     stats: [
       { label: 'Conversion Lift', value: '+42%' },
       { label: 'Average Order Value', value: '+$14.50' },
@@ -120,7 +120,7 @@ export const portfolioProjects: Project[] = [
     serviceType: 'Mobile App & Custom Web Platform',
     description: 'A beautiful, cross-platform fitness hub connecting users with trainers, tracking key metrics, and rendering custom analytical charts.',
     longDescription: 'PulseFit contracted us to upgrade their fragmented consumer wellness offering into a seamless native-like ecosystem. We constructed an interactive mobile coaching application using modern state synchronization, paired with a web-based dashboard utilizing animated widgets, interactive calendars, and offline-first database caches. Our AWS experts structured serverless API nodes ensuring low latency and high availability.',
-    image: '/src/assets/images/mobile_app_tech_1779270470217.png',
+    image: '/images/mobile_app_tech_1779270470217.png',
     stats: [
       { label: 'App Store Rating', value: '4.9★' },
       { label: 'Active Users', value: '120,000+' },
@@ -137,7 +137,7 @@ export const portfolioProjects: Project[] = [
     serviceType: 'Custom SaaS Platform & UI/UX Design',
     description: 'An exceptionally polished enterprise business intelligence dashboard tailored for corporate data analysis and decision workflows.',
     longDescription: 'Designed with a beautiful, high-contrast, modern clean theme, VeloBI handles multi-tenant data parsing across global units. We created bespoke SVG data tables, custom draggable workspace widgets, and micro-interactions leveraging motion frameworks. It incorporates interactive charts, automated report compilers, and absolute type safety across the complete React layout structure.',
-    image: '/src/assets/images/saas_dashboard_1779270491850.png',
+    image: '/images/saas_dashboard_1779270491850.png',
     stats: [
       { label: 'Data Points Processed', value: '2.5B+' },
       { label: 'Daily Active Businesses', value: '450+' },
