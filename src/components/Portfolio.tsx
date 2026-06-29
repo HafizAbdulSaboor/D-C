@@ -9,7 +9,7 @@ interface PortfolioProps {
 }
 
 export default function Portfolio({ onInquireAboutProject }: PortfolioProps) {
-  const [filter, setFilter] = useState<'all' | 'ecommerce' | 'tech'>('all');
+  const [filter, setFilter] = useState<'all' | 'ecommerce' | 'tech' | 'ai'>('all');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects = portfolioProjects.filter((p) => {
@@ -83,6 +83,19 @@ export default function Portfolio({ onInquireAboutProject }: PortfolioProps) {
               onMouseLeave={e => { if (filter !== 'tech') e.currentTarget.style.backgroundColor = '#ffffff'; }}
             >
               SaaS & Mobile Apps
+            </button>
+            <button
+              id="filter-proj-ai"
+              onClick={() => setFilter('ai')}
+              className="px-4 py-2 rounded-xl font-sans text-sm font-semibold transition-all duration-200 cursor-pointer border"
+              style={filter === 'ai'
+                ? { backgroundColor: '#7c3aed', color: '#ffffff', borderColor: '#7c3aed', boxShadow: '0 10px 15px -3px rgba(124,58,237,0.2)' }
+                : { backgroundColor: '#ffffff', color: '#475569', borderColor: '#bae6fd' }
+              }
+              onMouseEnter={e => { if (filter !== 'ai') e.currentTarget.style.backgroundColor = '#ede9fe'; }}
+              onMouseLeave={e => { if (filter !== 'ai') e.currentTarget.style.backgroundColor = '#ffffff'; }}
+            >
+              AI Apps
             </button>
           </div>
         </div>

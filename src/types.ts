@@ -15,7 +15,7 @@ export interface ServiceCategory {
 export interface Project {
   id: string;
   title: string;
-  category: 'ecommerce' | 'tech' | 'design';
+  category: 'ecommerce' | 'tech' | 'design' | 'ai';
   serviceType: string;
   description: string;
   longDescription: string;

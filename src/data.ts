@@ -146,6 +146,40 @@ export const portfolioProjects: Project[] = [
     technologies: ['React SPA', 'Tailwind CSS', 'TypeScript', 'D3.js Visualization', 'Express Middleware'],
     client: 'VeloBI Technologies',
     link: 'https://saas_dashboard_1779270491850.png'
+  },
+  {
+    id: 'proj-4',
+    title: 'NexaMind AI — Intelligent Business Automation Platform',
+    category: 'ai',
+    serviceType: 'AI SaaS Platform & Custom LLM Integration',
+    description: 'A powerful AI-driven SaaS platform that automates content generation, customer support, and data analysis using large language models.',
+    longDescription: 'NexaMind needed a full-scale AI platform to replace repetitive business workflows. We engineered a multi-agent LLM pipeline integrating GPT-4 and custom fine-tuned models for domain-specific tasks. The platform features real-time AI chat, automated report generation, smart email drafting, and a predictive analytics engine. Built on a scalable serverless AWS backend with a React dashboard, it handles 10,000+ AI requests daily with sub-second response times.',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80&w=800&h=500',
+    stats: [
+      { label: 'AI Requests / Day', value: '10,000+' },
+      { label: 'Workflow Time Saved', value: '74%' },
+      { label: 'Response Latency', value: '<0.8s' }
+    ],
+    technologies: ['OpenAI GPT-4', 'React', 'Python FastAPI', 'AWS Lambda', 'Pinecone Vector DB'],
+    client: 'NexaMind Corp.',
+    link: '#'
+  },
+  {
+    id: 'proj-5',
+    title: 'CalmPath — Mental Health & Therapy Companion App',
+    category: 'ai',
+    serviceType: 'Mobile App & AI Wellness Platform',
+    description: 'A compassionate mental wellness mobile app combining licensed therapist content, AI mood tracking, and guided meditation for daily emotional health.',
+    longDescription: 'CalmPath was built to make mental health support accessible to everyone. We developed a cross-platform iOS and Android app featuring an AI-powered mood journal that detects emotional patterns, personalized CBT (Cognitive Behavioral Therapy) exercises, and an on-demand AI companion for guided breathing and crisis support. The platform integrates with licensed therapists for live video sessions and uses encrypted health-grade data storage compliant with HIPAA standards.',
+    image: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=800&h=500',
+    stats: [
+      { label: 'Daily Active Users', value: '85,000+' },
+      { label: 'Mood Tracking Accuracy', value: '91%' },
+      { label: 'App Store Rating', value: '4.8★' }
+    ],
+    technologies: ['React Native', 'AI Sentiment Analysis', 'Node.js', 'HIPAA Storage', 'WebRTC Video'],
+    client: 'CalmPath Health Inc.',
+    link: '#'
   }
 ];
 
